@@ -16,13 +16,15 @@ int main () {
   ifstream myfile ("lev_vec.vec");
   ofstream myfile3 ("output_max_FC.vec");
 
+  //number of inputs added to output file	
   getline(myfile, line);
   int n= atoi(line.c_str());
-  myfile3 << n <<endl; // number of inputs added to output file
+  myfile3 << n <<endl; 
   
+  //1st set_vector sent to output file
   getline(myfile, line);
   string set_vector = line;
-  myfile3 << set_vector << endl; //1st set_vector sent to output file
+  myfile3 << set_vector << endl; 
   
   vector<bool> bitset(n, false);
   vector< vector<bool> > vectorset; //vectorset will be used for flagging 
